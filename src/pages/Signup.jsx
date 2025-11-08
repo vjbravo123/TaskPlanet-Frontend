@@ -3,7 +3,7 @@ import { useNavigate, useOutletContext } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 import Carousel from "../components/carousel";
-import "../css/Signup.css";
+import "../css/signup.css";
 
 const Signup = () => {
     const url = import.meta.env.REACT_APP_BACKEND_URL;
