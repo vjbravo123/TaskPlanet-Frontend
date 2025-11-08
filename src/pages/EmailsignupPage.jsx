@@ -74,9 +74,9 @@ const EmailsignupPage = () => {
         { email, password }
       );
 
-      // ✅ Save user session
-      setUser(user);
-      localStorage.setItem("user", JSON.stringify(user.user.user));
+      // ✅ Save user session      
+      setUser(user.user);
+      localStorage.setItem("user", JSON.stringify(user.user));
 
       navigate("/feed");
     } catch {
