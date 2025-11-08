@@ -1,0 +1,379 @@
+.feed-container {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #FAFAFF;
+  min-height: 100vh;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+/* Header */
+.feed-header {
+  border-bottom: 1px solid #eee;
+  padding: 12px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-row h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Tabs */
+.tab-buttons {
+  display: flex;
+  background: #f1f1f1;
+  border-radius: 20px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.tab-buttons button {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  cursor: pointer;
+  color: #444;
+}
+
+.tab-buttons button.active {
+  background: #007bff;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Create Post Box */
+.create-post-box {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.create-post-input-area {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.profile-placeholder {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden; /* ✅ hides corners, keeps circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e0e0e0; /* fallback background */
+}
+
+.profile-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ makes image fill nicely */
+}
+
+
+.post-input {
+  flex: 1;
+  background: #efefef;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 14px;
+}
+
+/* Actions row */
+.create-post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.photo-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.icon.blue {
+  stroke: #007bff;
+}
+
+.post-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #ddd;
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-size: 13px;
+  border: none;
+  opacity: 0.6;
+}
+
+/* Posts */
+.posts-section {
+  padding: 10px;
+}
+
+.post-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.post-user-info .name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.post-user-info .time {
+  font-size: 11px;
+  color: gray;
+}
+
+.post-text {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Like / Comment / Share row */
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+}
+
+.post-actions button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+}
+
+/* --- FIX TOP SECTION LAYOUT --- */
+
+.top-section {
+  background: #EEF0F2;
+  padding: 14px 14px;
+  border-bottom: 1px solid #f4f5f8;
+  margin: 12px;
+  border-radius: 10px;
+}
+
+/* Fix header alignment */
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+  margin-bottom: 10px;
+}
+
+/* Ensure tabs stay on right and don't push weirdly */
+.header-left h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+}
+
+/* Override previous tab style without breaking your theme */
+.tab-buttons {
+  display: flex;
+  background: #e0e0e0;
+  border-radius: 20px;
+  padding: 4px 6px;
+  gap: 4px;
+  align-items: center;
+}
+
+.tab-buttons {
+  padding-left: 100px;
+  background: transparent;
+}
+
+/* Top Social Page Header */
+.feed-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff; 
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e5e5;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Page Title */
+.feed-top-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+/* User Info in Header */
+.header-user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-profile-pic {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #007bff;
+}
+
+.header-user-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+
+.profile-menu-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-popup {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  padding: 8px 0;
+  width: 130px;
+  z-index: 20;
+}
+
+.profile-popup button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d9534f;
+}
+
+.profile-popup button:hover {
+  background: #f3f3f3;
+}
+
+/* Comment wrapper */
+.comments-section {
+  margin-top: 12px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e4e6eb;
+}
+
+/* Existing comments */
+.existing-comments {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.existing-comments p {
+  margin: 6px 0;
+  padding: 8px 10px;
+  background: white;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #e4e6eb;
+}
+
+.existing-comments strong {
+  color: #111;
+  margin-right: 5px;
+  font-weight: 600;
+}
+
+/* Write comment box */
+.add-comment {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.add-comment input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.add-comment input:focus {
+  border-color: #0084ff;
+  outline: none;
+}
+
+.add-comment button {
+  padding: 8px 14px;
+  border: none;
+  background: #0084ff;
+  color: white;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-comment button:hover {
+  background: #006fd6;
+}
+

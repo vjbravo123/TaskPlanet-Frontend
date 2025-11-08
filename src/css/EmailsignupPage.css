@@ -1,0 +1,93 @@
+/* ✅ Global mobile-like signup layout */
+
+.signup-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* begin at top */
+  background: #f5f6fa;
+  padding: 0;
+}
+
+.signup-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px; /* mimic mobile width */
+  min-height: 100vh; /* take full screen height */
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border-radius: 0; /* real mobile, no rounded edges */
+  box-shadow: none; /* no card feel */
+}
+
+.signup-title {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+/* Inputs */
+.signup-input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  background: #fff;
+}
+.signup-input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.35);
+}
+
+/* Buttons */
+.signup-btn {
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 8px;
+}
+.signup-btn:hover { background: #1e40af; }
+.signup-btn.verify { background: #059669; }
+.signup-btn.verify:hover { background: #047857; }
+.signup-btn.complete { background: #7c3aed; }
+.signup-btn.complete:hover { background: #5b21b6; }
+
+/* Step info text */
+.step-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+  margin-top: 14px;
+}
+
+/* OTP input group */
+.otp-input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+/* responsive safe padding */
+@media (max-width: 480px) {
+  .signup-box {
+    padding: 18px;
+  }
+}

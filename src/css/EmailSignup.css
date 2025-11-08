@@ -1,0 +1,138 @@
+.email-signup-container {
+  max-width: 400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #0b59f9;
+  font-family: "Poppins", sans-serif;
+}
+
+.signup-header {
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  height: 22vh;
+}
+
+.signup-header h2 {
+  margin-top: 22px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.back-btn {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  color: white;
+}
+.back-btn{
+  margin-top: 15px;
+}
+.help-icon{
+  margin-top: 25px;
+  margin-right: 5px;
+}
+.help-icon {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.subtitle {
+  position:absolute;
+  top: 8vh;
+    left: 44.5vw;
+  text-align: center;
+  font-size: 15px;
+  color: black;
+}
+
+.signup-box {
+  border-radius: 5% !important;
+  background: #fff;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.google-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  margin: 15px 0;
+  position: relative;
+  color: #777;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  width: 40%;
+  background: #ccc;
+  position: absolute;
+  top: 50%;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.email-btn {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  background: #4a90e2;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: 0.2s;
+}
+
+.email-btn:hover {
+  background: #357ac8;
+}
+
+.email-btn i {
+  margin-right: 8px;
+}
+
+/* Terms */
+.terms {
+  font-size: 13px;
+  color: #666;
+  line-height: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.terms input {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.terms a {
+  text-decoration: none;
+  color: #4a90e2;
+  font-weight: 500;
+}
