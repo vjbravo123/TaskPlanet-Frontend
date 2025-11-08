@@ -8,7 +8,7 @@ import axios from "axios";
 import "../css/Feed.css";
 
 const FeedPage = () => {
-      const url = import.meta.env.REACT_APP_BACKEND_URL;
+      const url = import.meta.env.VITE_BACKEND_URL;
     const [activeTab, setActiveTab] = useState("all");
     const [showMenu, setShowMenu] = useState(false);
     const { user, setUser } = useOutletContext();

@@ -6,7 +6,7 @@ import Carousel from "../components/carousel";
 import "../css/signup.css";
 
 const Signup = () => {
-    const url = import.meta.env.REACT_APP_BACKEND_URL;
+    const url = import.meta.env.VITE_BACKEND_URL;
   const {setUser} = useOutletContext();
   const navigate = useNavigate();
 

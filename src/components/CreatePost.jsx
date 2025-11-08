@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import axios from "axios";
 
 const CreatePost = ({ activeTab, setActiveTab, Camera, Send, user, refreshPosts }) => {
-  const url = import.meta.env.REACT_APP_BACKEND_URL;
+  const url = import.meta.env.VITE_BACKEND_URL;
   const [text, setText] = useState("");
   const [image, setImage] = useState(null);
   const fileInputRef = useRef(null);

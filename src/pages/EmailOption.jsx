@@ -5,7 +5,7 @@ import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 
 const EmailSignup = () => {
-  const url = import.meta.env.REACT_APP_BACKEND_URL;
+  const url = import.meta.env.VITE_BACKEND_URL;
   const navigate = useNavigate();
 
   const {setUser} = useOutletContext();

@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useEffect } from 'react';
 
 const PostsSection = ({ filteredPosts, Heart, MessageCircle, Share2, user }) => {
-  const url = import.meta.env.REACT_APP_BACKEND_URL;
+  const url = import.meta.env.VITE_BACKEND_URL;
   const [posts, setPosts] = useState(filteredPosts);
   const [openComments, setOpenComments] = useState(null);
   const [commentText, setCommentText] = useState("");

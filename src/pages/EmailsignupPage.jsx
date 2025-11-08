@@ -13,11 +13,12 @@ const EmailsignupPage = () => {
   const [step, setStep] = useState(1);
 
   const sendOtp = async () => {
-    const url = import.meta.env.REACT_APP_BACKEND_URL;
+    const url = import.meta.env.VITE_BACKEND_URL;
     if (!email) return alert("Enter email");
 
     try {
       const { data } = await axios.post(`${url}/api/auth/send-otp`, { email });
+      
 
       if (data.userExists) {
         if (data.passwordExists) {
