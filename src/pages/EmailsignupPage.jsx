@@ -4,6 +4,7 @@ import "../css/EmailsignupPage.css";
 import { useOutletContext, useNavigate } from "react-router-dom";
 
 const EmailsignupPage = () => {
+  const url = import.meta.env.VITE_BACKEND_URL;
   const { setUser } = useOutletContext();
   const navigate = useNavigate();
 
@@ -18,12 +19,12 @@ const EmailsignupPage = () => {
 
     try {
       const { data } = await axios.post(`${url}/api/auth/send-otp`, { email });
-      
+
 
       if (data.userExists) {
         if (data.passwordExists) {
           alert("Account exists. Enter your password to login.");
-          setStep(4); 
+          setStep(4);
         } else {
           alert("This email is registered via Google. Please login with Google.");
         }
