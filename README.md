@@ -1,57 +1,85 @@
-# TaskPlanet Frontend
 
-Frontend for TaskPlanet, a social media application. Built with **React** and designed to interact with the TaskPlanet backend API.
+# 🌐 TaskPlanet Frontend
+
+Frontend for **TaskPlanet**, a modern social media application built with **React (Vite)**.  
+It provides a clean, responsive interface and integrates seamlessly with the [TaskPlanet Backend](https://taskplanet-backend-sm2h.onrender.com).
 
 ---
 
 ## 🚀 Features
 
-* User authentication (via email OTP)
-* User profile management
-* Create, view, like, and share posts
-* Image uploads via Cloudinary or local storage
-* Responsive design for desktop and mobile
+### 🔐 Authentication
+- **Google One Tap Login** – Quick and secure Google-based authentication.
+- **Email OTP Verification** – Users can sign up or log in via OTP sent to their email.
+
+### 📝 Social Feed
+- Create posts using **either text or image** (only one required).
+- View, like, and comment on posts.
+- Posts update dynamically with smooth UI transitions.
+
+### 👤 Profile Management
+- View and edit user profile information.
+- Supports profile images.
+
+### 🖼️ Image Handling
+- Image uploads handled via **Cloudinary** or local storage.
+- Optimized image rendering for fast loading.
+
+### 💻 Responsive Design
+- Fully responsive layout for **mobile, tablet, and desktop** devices.
+- Built with **Tailwind CSS** and modern component libraries.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **React** - Frontend library
-* **React Router** - Client-side routing
-* **Axios** - HTTP requests
-* **Tailwind CSS** - Styling
-* **Lucide-react** - Icons
+| Layer | Technology |
+|--------|-------------|
+| **Frontend Framework** | React (Vite) |
+| **Routing** | React Router |
+| **State Management** | React Hooks |
+| **HTTP Client** | Axios |
+| **Styling** | Tailwind CSS |
+| **Icons** | Lucide-react |
+| **Auth Integration** | Google OAuth (One Tap Login) |
 
 ---
 
 ## 💾 Installation
 
-1. Clone the repository:
+### 1️⃣ Clone the Repository
 
 ```bash
-git clone <your-frontend-repo-url>
-cd <repo-folder>
+git clone https://github.com/vjbravo123/TaskPlanet-Frontend.git
+cd TaskPlanet-Frontend
 ```
 
-2. Install dependencies:
+### 2️⃣ Install Dependencies
 
 ```bash
 npm install
 ```
 
-3. Create a `.env` file in the root directory with the backend URL:
+### 3️⃣ Configure Environment Variables
+
+Create a `.env` file in the project root:
 
 ```env
-REACT_APP_BACKEND_URL=http://localhost:5000
+VITE_GOOGLE_AUTH_CLIENT=your_google_oauth_client_id
+VITE_BACKEND_URL=https://taskplanet-backend-sm2h.onrender.com
+# For local development:
+# VITE_BACKEND_URL=http://localhost:5000
 ```
 
-4. Start the frontend server:
+> ⚠️ Make sure to replace `your_google_oauth_client_id` with your actual Google Client ID from Google Cloud Console.
+
+### 4️⃣ Start the Development Server
 
 ```bash
-npm start
+npm run dev
 ```
 
-The frontend will run on `http://localhost:3000` by default.
+The app runs on **http://localhost:5173** (default Vite port).
 
 ---
 
@@ -60,12 +88,13 @@ The frontend will run on `http://localhost:3000` by default.
 ```
 frontend/
 ├─ src/
-│  ├─ components/     # Reusable UI components
-│  ├─ pages/          # App pages
-│  ├─ api/            # Axios API requests
+│  ├─ components/     # Reusable UI components (buttons, modals, etc.)
+│  ├─ pages/          # App pages (Feed, Login, Profile, etc.)
+│  ├─ api/            # Axios configuration and API calls
+│  ├─ assets/         # Static assets (images, icons)
 │  ├─ css/            # Stylesheets
-│  ├─ App.js
-│  └─ index.js
+│  ├─ App.jsx
+│  └─ main.jsx
 ├─ public/
 ├─ .env
 └─ package.json
@@ -75,26 +104,37 @@ frontend/
 
 ## 🔧 Environment Variables
 
-| Variable              | Description            |
-| --------------------- | ---------------------- |
-| REACT_APP_BACKEND_URL | URL of the backend API |
+| Variable | Description |
+|-----------|-------------|
+| `VITE_GOOGLE_AUTH_CLIENT` | Google OAuth client ID for One Tap Login |
+| `VITE_BACKEND_URL` | Backend API base URL |
 
 ---
 
-## 💡 Tips
+## 🌍 Deployment Info
 
-* Use **React Developer Tools** to debug components
-* Ensure the backend server is running before starting the frontend
-* Axios base URL is configured via `.env` for flexibility
+- **Frontend Live:** [https://task-planet-frontend-yk82.vercel.app/](https://task-planet-frontend-yk82.vercel.app/)
+- **Backend API:** [https://taskplanet-backend-sm2h.onrender.com](https://taskplanet-backend-sm2h.onrender.com)
+- **GitHub Repository:** [TaskPlanet Frontend](https://github.com/vjbravo123/TaskPlanet-Frontend.git)
+
+> ⏳ *Note:* The backend is hosted on a **Render free instance**, so it may take up to 1 minute to wake up after inactivity.
 
 ---
 
-## ⚡ Test Frontend
+## 💡 Tips for Developers
 
-Open your browser and go to:
+- Ensure your backend is running before starting the frontend.
+- Use **React Developer Tools** for debugging.
+- Configure Google One Tap properly in Google Cloud Console (Web Client ID required).
+- Keep your `.env` file private and never push it to GitHub.
 
-```
-http://localhost:3000
-```
+---
 
-You should see the TaskPlanet frontend running and connected to your backend API.
+### 🧑‍💻 Author
+
+**Vivek Joshii**  
+🔗 [GitHub: @vjbravo123](https://github.com/vjbravo123)
+
+---
+
+> 💬 *A responsive and modern frontend for TaskPlanet — integrating Google One Tap Login, OTP verification, and social post features.*
